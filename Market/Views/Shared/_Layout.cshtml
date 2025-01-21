@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - My market</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Welcome to my market!</h1>
+        <p>Current Date: @DateTime.Now.ToString("MMMM ddd, yyyy")</p>
+        <nav>
+            <ui> 
+                <li><a href="/"> Home</a></li>
+                <li><a href="/products/GetAll">Products</a></li>
+                <li><a href="/about">About as</a></li>
+                <li><a href="/contact">Contact</a ></li>
+            </ui>
+        </nav>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <p>&copy; @DateTime.Now.Year Your Store Nmae. All rights reservered</p>
+    </footer>
+</body>
+</html>
