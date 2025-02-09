@@ -25,9 +25,9 @@ namespace Market.Repository
                 exProduct.Name = productDTO.Name;
                 exProduct.Description = productDTO.Description;
                 exProduct.Price = productDTO.Price;
-                exProduct.fats = productDTO.fats;
-                exProduct.protein = productDTO.protein;
-                exProduct.carbohydrates = productDTO.carbohydrates;
+                exProduct.Fats = productDTO.fats;
+                exProduct.Protein = productDTO.protein;
+                exProduct.Carbohydrates = productDTO.carbohydrates;
             }
             await _context.SaveChangesAsync();
             return exProduct;

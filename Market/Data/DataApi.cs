@@ -6,6 +6,7 @@ namespace Market.Data
     public class ApplicationContext: DbContext
     {
         public DbSet<Product>  Products { get; set; }
+        public DbSet<Cart> Carts { get; set; }
         public ApplicationContext() => Database.EnsureCreated();
         public ApplicationContext(DbContextOptions dbOptions) :base(dbOptions)
         {

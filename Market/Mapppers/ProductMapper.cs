@@ -10,9 +10,9 @@ namespace Market.Mapppers
             Id = dto.Id,
             Name = dto.Name,
             Price = dto.Price,
-            fats = dto.fats,
-            protein = dto.protein,
-            carbohydrates = dto.carbohydrates,
+            fats = dto.Fats,
+            protein = dto.Protein,
+            carbohydrates = dto.Carbohydrates,
             Description = dto.Description
         };
 
@@ -27,9 +27,9 @@ namespace Market.Mapppers
         {
             Name = dto.Name,
             Price = dto.Price,
-            fats = dto.fats,
-            protein = dto.protein,
-            carbohydrates = dto.carbohydrates,
+            Fats = dto.fats,
+            Protein = dto.protein,
+            Carbohydrates = dto.carbohydrates,
             Description = dto.Description
         };
     }
