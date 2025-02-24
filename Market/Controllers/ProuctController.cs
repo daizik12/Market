@@ -5,6 +5,7 @@ using Market.Data;
 using Market.Interfaces;
 using Market.Mapppers;
 using Market.DTOs.Product;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Market.Controllers
 {
@@ -27,7 +28,7 @@ namespace Market.Controllers
             if (product == null) return NotFound();
             return Ok(product);
         }
-
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {

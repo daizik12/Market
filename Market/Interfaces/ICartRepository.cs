@@ -1,4 +1,5 @@
-﻿using Market.Models;
+﻿
+using Market.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Market.Interfaces

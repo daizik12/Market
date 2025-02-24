@@ -10,10 +10,12 @@ namespace Market.Models
         [Required]
         public int Quantity { get; set; }
         [Required]
-        public int? ProductId { get; set; }
+        public int ProductId { get; set; }
         [Required]
-        public Product? Product { get; set; }
+        public Product Product { get; set; } = new Product();
+        [Required]
         public int UserId { get; set; }
+
         //[Column(TypeName ="decimal(18,2)")]
         //List<Product> Products { get; set; } = new List<Product>();
     }

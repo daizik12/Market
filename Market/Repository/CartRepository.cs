@@ -5,13 +5,14 @@ using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata.Ecma335;
 
 
+
 namespace Market.Repository
 {
     public class CartRepository : ICartRepository
     {
         private readonly ApplicationContext _context;
         public CartRepository(ApplicationContext context) => _context = context;
-
+        
         public async Task<Cart?> CreateAsync(Cart cart)
         {
             await _context.Carts.AddAsync(cart);
@@ -27,7 +28,7 @@ namespace Market.Repository
         public async Task<List<Cart>?> GetByUserIdAsync(int id)
         {
             var Carts = await _context.Carts.Where(x=>x.UserId ==id).ToListAsync();
-            if(Carts.Any()) return Carts;
+            if(Carts!=null) return Carts;
             return null;
         }
         public async Task<Cart?> GetByIdAsync(int id)
@@ -40,10 +41,8 @@ namespace Market.Repository
             if (exCart != null)
             {
                 exCart.Product = cart.Product;
-                exCart.UserId = cart.UserId;
                 exCart.ProductId = cart.ProductId;
                 exCart.Quantity = cart.Quantity;
-
             }
             await _context.SaveChangesAsync();
             return exCart;
@@ -59,5 +58,6 @@ namespace Market.Repository
             }
             return null;
         }
+        
     }
 }
